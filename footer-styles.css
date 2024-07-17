@@ -1,0 +1,84 @@
+
+
+
+.luxury-footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    color: #333;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-column p,
+.footer-column a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.mailing-list-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mailing-list-form input,
+.mailing-list-form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.mailing-list-form button {
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.mailing-list-form button:hover {
+    background-color: #64310a;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}

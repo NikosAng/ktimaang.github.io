@@ -1,0 +1,165 @@
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    color: #333;
+    background-color: #f8f5f1;
+    line-height: 1.6;
+}
+
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Add a dark overlay for readability */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: #fff; /* Change text color to white for contrast */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+    white-space: nowrap; /* Keeps text in one line */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 2s forwards; /* Starts after image fades in */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#history-intro {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.dropcap {
+    float: left;
+    font-size: 5rem;
+    line-height: 0.8;
+    padding-right: 0.1em;
+    font-weight: 600;
+    color: #8b4513;
+}
+
+.history-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.history-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.text-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .history-section,
+    .history-section.reverse {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-content {
+        width: 100%;
+    }
+}
+
+/* Override menu colors for this page */
+.top-menu {
+    background-color: transparent; /* Make the menu background transparent */
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    transition: opacity 1s ease-in-out; /* Add transition for opacity */
+}
+
+.top-menu a {
+    color: #fff !important; /* Change text color to white for contrast */
+}
+
+.top-menu a:hover {
+    color: #8b4513 !important; /* Change hover color to the brownish color */
+    text-shadow: none !important; /* Remove text shadow on hover */
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    transition: opacity 1s ease-in-out; /* Add transition for opacity */
+}
+
+.hamburger-icon span {
+    background: #fff; /* Override hamburger icon color to white for contrast */
+}
