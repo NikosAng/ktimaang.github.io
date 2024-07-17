@@ -1,0 +1,154 @@
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f8f5f1;
+    color: #333;
+}
+
+.top-menu {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.top-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.top-menu a:hover {
+    color: #8b4513;
+}
+
+header {
+    text-align: center;
+    padding: 100px 0 50px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #8b4513;
+}
+
+.intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    width: 48%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.products {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.product-info {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.product-info h2 {
+    font-size: 2em;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+}
+
+.product-image {
+    flex: 1;
+    text-align: right;
+}
+
+.product-image img {
+    max-width: 200px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .product-info {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-image {
+        text-align: center;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    transition-delay: 0.2s;
+}
+
+.intro {
+    transition-delay: 0.8s;
+}
+
+.product:nth-child(1) {
+    transition-delay: 1.2s;
+}
+
+.product:nth-child(2) {
+    transition-delay: 1.6s;
+}

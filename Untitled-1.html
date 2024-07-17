@@ -1,0 +1,88 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Counts | Welcome</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+        }
+        .fullscreen-bg__video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen-bg">
+        <video loop muted autoplay poster="villa.jpg" class="fullscreen-bg__video">
+            <source src="stock.mov" type="video/quicktime">
+        </video>
+    </div>
+    
+    <div class="content">
+        <img src="logo.png" alt="Two Counts Logo" class="logo">
+        <h1>Welcome to Two Counts</h1>
+        <p class="subtitle">"The earth is the soul of our craft"</p>
+        <a href="#" class="cta-button">Explore Our Wines</a>
+    </div>
+
+    <script>
+        // Add any necessary JavaScript here
+    </script>
+</body>
+</html>
